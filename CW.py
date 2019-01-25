@@ -18,6 +18,10 @@ class BMI:
     # caculate BMI
     def caculation(self):
         return ((self.weight / (self.height * self.height))*703)
+    # change the weight and height
+    def changeIt(self,weight,height):
+        self.weight = weight
+        self.height = height
     # print name weight height and BMI
     def printAll(self):
         print(f'{self.name} weighs {self.weight} pounds and is {self.height} inches tall.\nTheir BMI is {self.caculation()}')
@@ -38,7 +42,7 @@ class Product:
 def main():
     # prob1()
     # prob2()
-    # prob3()
+    prob3()
     # prob4()
 
 def prob1():
@@ -58,13 +62,21 @@ def prob2():
 def prob3():
     person1 = BMI("Autumn", 140, 62)
     person1.printAll()
-    # person1.caculation()
+    person1.changeIt(130, 63)
+    person1.printAll()
+
     person2 = BMI("Adam", 160, 68)
     person2.printAll()
-    # person2.caculation()
+    person2.changeIt(150, 70)
+    person2.printAll()
+
     person3 = BMI("Amy", 150, 49)
     person3.printAll()
-    # person3.caculation()
+    person3.changeIt(155, 51)
+    person3.printAll()
+
+
+
 
 # create an object in class Product
 def prob4():
